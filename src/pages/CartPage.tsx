@@ -37,9 +37,21 @@ export function CartPage() {
 
     // VALIDASI
     if (!customerName || !customerAddress) {
-
       toast.error(
-        "Lengkapi nama dan alamat terlebih dahulu"
+        "Lengkapi nama dan alamat terlebih dahulu",
+        {
+          style: {
+            background: "#5b2d0c",
+            color: "#fff",
+            padding: "16px",
+            borderRadius: "12px",
+            fontWeight: "500",
+          },
+          iconTheme: {
+            primary: "#fff",
+            secondary: "#5b2d0c",
+          },
+        }
       );
 
       return;
