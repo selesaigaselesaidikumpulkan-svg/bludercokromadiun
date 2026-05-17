@@ -20,7 +20,7 @@ export function FAQSection() {
     {
       question: 'Berapa lama Bluder Cokro dapat bertahan?',
       answer:
-        'Bluder Cokro dapat bertahan sekitar 6-7 hari di suhu ruang. Untuk pengiriman melalui ekspedisi, produk kami tetap aman dikonsumsi karena dikemas secara khusus agar tetap fresh hingga 3-5 hari perjalanan sejak tanggal pengiriman.'
+        'Bluder Cokro dapat bertahan sekitar 6-7 hari di suhu ruang. Untuk pengiriman melalui ekspedisi, produk kami tetap aman dikonsumsi karena dikemas secara khusus agar tetap fresh hingga perjalanan sejak tanggal pengiriman.'
     },
     {
       question: 'Apakah bisa melakukan pembelian melalui Website ini?',
@@ -55,9 +55,13 @@ export function FAQSection() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ duration: 0.25 }}
+            /* PENTING: 
+               - flex flex-col: Membagi header dan list secara vertikal
+               - max-h-[70vh]: Membatasi tinggi popup agar tidak menabrak header
+            */
             className="fixed bottom-24 right-6 z-50 w-[90%] max-w-[340px] max-h-[70vh] bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-brand-brown/10 flex flex-col"
           >
-            {/* Header */}
+            {/* Header - flex-shrink-0 agar tingginya tetap (tidak tertekan) */}
             <div className="p-6 border-b border-brand-brown/10 flex-shrink-0 bg-white">
               <h2 className="text-xl font-playfair font-bold text-brand-brown">
                 FAQ
@@ -67,7 +71,7 @@ export function FAQSection() {
               </p>
             </div>
 
-            {/* FAQ Items */}
+            {/* FAQ Items - flex-1 & overflow-y-auto agar bagian ini saja yang scrollable */}
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-brand-brown/20 bg-white">
               {faqs.map((faq, index) => (
                 <div
@@ -106,8 +110,7 @@ export function FAQSection() {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        {/* Perubahan di sini: Penambahan class text-justify */}
-                        <div className="px-6 pb-5 text-sm text-brand-brown/70 leading-relaxed text-justify">
+                        <div className="px-6 pb-5 text-sm text-brand-brown/70 leading-relaxed">
                           {faq.answer}
                         </div>
                       </motion.div>

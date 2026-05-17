@@ -1,149 +1,182 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PRODUCTS = [
   {
     id: 1,
-    name: 'Bluder Standar',
-    target: '#standar', 
-    description: 'Berbagai varian bluder yang bisa kamu pilih untuk dinikmati sendiri atau bersama keluarga',
-    image: '/foto/bluder-satuan.png',
-    alt:"Berbagai varian Bluder dengan isian premium"
+    name: "Bluder Standar",
+    target: "#standar",
+    description:
+      "Berbagai varian bluder yang bisa kamu pilih untuk dinikmati sendiri atau bersama keluarga.",
+    image: "/foto/bluder-satuan.png",
+    alt: "Berbagai varian Bluder premium khas Madiun",
   },
   {
     id: 2,
-    name: 'Bluder Big Size',
-    target: '#bigsize',
-    description: 'Ukuran lebih besar untuk kepuasan maksimal dan momen spesial.',
-    image: '/foto/bluder-big.png',
-    alt: "Hampers Bluder Cokro - bingkisan, hadiah, oleh-oleh khas Madiun yang elegan untuk keluarga atau kerabat."
+    name: "Bluder Big Size",
+    target: "#bigsize",
+    description:
+      "Ukuran lebih besar untuk kepuasan maksimal dan momen spesial.",
+    image: "/foto/bluder-big.png",
+    alt: "Bluder Big Size khas Madiun",
   },
   {
     id: 3,
-    name: 'Bluder Pouch',
-    target: '#pouch',
-    description: 'Kemasan praktis yang mudah dibawa ke mana saja.',
-    image: '/foto/bluder-pouch.png',
-    alt: "Bluder Cokro Pouch- Oleh-oleh khas Madiun dengan kemasan pouch dengan berbagai rasa, coklat, keju, kopi, original yang mudah dibawa saat traveling atau mudik"
-  }
+    name: "Bluder Pouch",
+    target: "#pouch",
+    description:
+      "Kemasan praktis yang mudah dibawa ke mana saja.",
+    image: "/foto/bluder-pouch.png",
+    alt: "Bluder Pouch khas Madiun",
+  },
 ];
 
 export function ProductsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
   return (
-    <section id="produk" className="py-20 bg-brand-cream relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="produk"
+      className="relative overflow-hidden bg-brand-cream py-16 md:py-20"
+      style={{ contentVisibility: "auto" }}
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="max-w-2xl mb-12">
-          <motion.h2 
-            initial={{ opacity: 0, x: -20 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }} 
-            className="text-4xl md:text-5xl font-playfair font-bold text-brand-brown mb-4"
+        {/* HEADER */}
+        <div className="mb-12 max-w-2xl">
+          <motion.h2
+            initial={{ opacity: 0, x: -16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-4 font-playfair text-4xl font-bold text-brand-brown md:text-5xl"
           >
             Produk Unggulan
           </motion.h2>
-          <div className="w-20 h-1 bg-brand-red mb-6"></div>
+
+          <div className="mb-6 h-1 w-20 rounded-full bg-brand-red"></div>
         </div>
 
-        {/* Desktop Vertical Accordion */}
-        <div className="hidden md:flex h-[600px] w-full overflow-hidden rounded-[2.5rem] shadow-xl bg-white p-3 gap-[15px]">
+        {/* DESKTOP */}
+        <div className="hidden h-[560px] w-full overflow-hidden rounded-[2.2rem] bg-white p-3 shadow-xl md:flex md:gap-3">
           {PRODUCTS.map((product, index) => {
             const isActive = hoveredIndex === index;
 
             return (
               <motion.div
                 key={product.id}
-                className="relative h-full rounded-[2rem] overflow-hidden cursor-pointer shadow-md group"
+                className="group relative h-full cursor-pointer overflow-hidden rounded-[1.8rem] shadow-md transform-gpu"
                 onMouseEnter={() => setHoveredIndex(index)}
                 animate={{
-                  width: isActive ? '65%' : '17.5%',
+                  width: isActive ? "64%" : "18%",
                 }}
                 transition={{
-                  type: 'spring',
-                  stiffness: 300,
-                  damping: 30,
+                  duration: 0.45,
                 }}
               >
-                {/* Background Image */}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                {/* IMAGE */}
+                <div className="absolute inset-0">
+                  <img
+                    src={product.image}
+                    alt={product.alt}
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="1400"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+
+                {/* OVERLAY */}
+                <div
+                  className={`absolute inset-0 transition-all duration-500 ${
+                    isActive
+                      ? "bg-gradient-to-t from-brand-brown/90 via-brand-brown/20 to-transparent"
+                      : "bg-black/40"
+                  }`}
                 />
-                
-                {/* Overlay: Gelap saat tertutup, Gradasi saat terbuka */}
-                <div className={`absolute inset-0 transition-opacity duration-500 ${
-                  isActive 
-                    ? 'bg-gradient-to-t from-brand-brown/90 via-brand-brown/20 to-transparent' 
-                    : 'bg-black/40'
-                }`} />
 
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <div className="flex items-center h-full w-full relative">
-                    
-                    {/* 1. TEXT VERTICAL (Muncul saat kartu tertutup) */}
-                    {!isActive && (
-                      <motion.div
-                        className="absolute left-1/2 bottom-12 -translate-x-1/2 whitespace-nowrap text-white font-playfair text-2xl font-bold tracking-widest uppercase [writing-mode:vertical-lr] rotate-180"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                      >
+                {/* CONTENT */}
+                <div className="absolute inset-0 flex flex-col justify-end p-7">
+                  
+                  {/* VERTICAL TITLE */}
+                  {!isActive && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="absolute bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap font-playfair text-2xl font-bold uppercase tracking-widest text-white [writing-mode:vertical-lr] rotate-180"
+                    >
+                      {product.name}
+                    </motion.div>
+                  )}
+
+                  {/* EXPANDED CONTENT */}
+                  {isActive && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.35 }}
+                      className="max-w-lg"
+                    >
+                      <h3 className="mb-4 font-playfair text-4xl font-bold text-white">
                         {product.name}
-                      </motion.div>
-                    )}
+                      </h3>
 
-                    {/* 2. CONTENT EXPANDED (Muncul saat kartu terbuka) */}
-                    {isActive && (
-                      <motion.div
-                        className="w-full"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.1 }}
+                      <p className="mb-7 line-clamp-3 text-base leading-relaxed text-white/90 md:text-lg">
+                        {product.description}
+                      </p>
+
+                      <Link
+                        to={`/produk${product.target}`}
+                        className="inline-block rounded-xl bg-brand-sand px-7 py-3 font-bold text-brand-brown shadow-lg transition-all duration-300 hover:bg-white"
                       >
-                        <h3 className="text-4xl font-playfair font-bold text-white mb-4">
-                          {product.name}
-                        </h3>
-                        <p className="text-white/90 text-lg max-w-md line-clamp-3 mb-8 leading-relaxed">
-                          {product.description}
-                        </p>
-                        {/* Mengarah ke /produk#target-id */}
-                        <Link 
-                          to={`/produk${product.target}`} 
-                          className="inline-block px-8 py-3 bg-brand-sand text-brand-brown font-bold rounded-xl hover:bg-white transition-all shadow-lg"
-                        >
-                          Lihat Detail
-                        </Link>
-                      </motion.div>
-                    )}
-                    
-                  </div>
+                        Lihat Detail
+                      </Link>
+                    </motion.div>
+                  )}
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Mobile View (Stacking Biasa) */}
-        <div className="md:hidden flex flex-col gap-6">
+        {/* MOBILE */}
+        <div className="flex flex-col gap-6 md:hidden">
           {PRODUCTS.map((product) => (
-            <div key={product.id} className="relative h-[400px] rounded-[2rem] overflow-hidden shadow-lg">
-               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
-                  <h3 className="text-2xl font-playfair font-bold text-white mb-2">{product.name}</h3>
-                  {/* Link Mobile juga diarahkan ke hash target */}
-                  <Link to={`/produk${product.target}`} className="text-brand-sand font-bold">
-                    Lihat Detail &gt;
-                  </Link>
-               </div>
+            <div
+              key={product.id}
+              className="relative overflow-hidden rounded-[2rem] shadow-lg"
+            >
+              {/* IMAGE WRAPPER */}
+              <div className="aspect-[4/5]">
+                <img
+                  src={product.image}
+                  alt={product.alt}
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="1000"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* OVERLAY */}
+              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent p-7">
+                <h3 className="mb-2 font-playfair text-2xl font-bold text-white">
+                  {product.name}
+                </h3>
+
+                <Link
+                  to={`/produk${product.target}`}
+                  className="font-bold text-brand-sand"
+                >
+                  Lihat Detail &gt;
+                </Link>
+              </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
