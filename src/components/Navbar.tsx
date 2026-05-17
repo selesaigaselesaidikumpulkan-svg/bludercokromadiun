@@ -45,7 +45,7 @@ export function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/LOOGO_BLUDER.webp" alt="Bluder Cokro Logo" className="h-16 w-auto drop-shadow-md" />
+            <img src='../foto/LOOGO_BLUDER.webp'alt="Bluder Cokro Logo" className="h-16 w-auto drop-shadow-md" />
           </Link>
 
           {/* Desktop Nav */}
