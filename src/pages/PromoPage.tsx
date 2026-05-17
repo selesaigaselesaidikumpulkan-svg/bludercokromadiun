@@ -18,7 +18,7 @@ export default function PromoPage() {
     {
       title: "HUT COKRO 37 TAHUN 🎉",
       date: "19-21 April 2026",
-      image: "/foto/promo 1.jpeg",
+      image: "/foto/promo 1.webp",
       link: "https://www.instagram.com/p/DXLgO0bkq46/",
       detail: `🎉 PROMO WALK-IN HUT COKRO 37 TAHUN 🎉 
 
@@ -33,7 +33,7 @@ Nikmati potongan harga sebesar Rp37.000 untuk pembelian Paket Spesial HUT Cokro 
     {
       title: "Photo Competition 📸",
       date: "1-14 April 2026",
-      image: "/foto/promo 3.jpeg",
+      image: "/foto/promo 3.webp",
       link: "https://www.instagram.com/p/DWljj4AjsYp/",
       detail: `🎉 PHOTO COMPETITION SPECIAL HUT 37 TAHUN COKRO🎉
 
@@ -62,7 +62,7 @@ Yuk semarakkan HUT 37 Cokro dan jangan lupa ikut challengenya ya Sobat 🤗`,
     {
       title: "Promo HUT Bekasi 🎊",
       date: "7-12 Maret 2026",
-      image: "/foto/promo 2.jpeg",
+      image: "/foto/promo 2.webp",
       link: "https://www.instagram.com/p/DVaxrn2mCjL/",
       detail: `🎉 DISKON KHUSUS WARGA BEKASI! 🎉
 
@@ -119,7 +119,7 @@ Dalam rangka memperingati HUT ke-26 Kota Bekasi, Cokro kasih promo spesial buat 
       {/* MASKOT */}
       {showMaskot && (
         <div className="fixed top-32 left-4 z-50 animate-bubbleOut flex items-start gap-2">
-          <img src="/foto/maskot.png" className="w-24" />
+          <img src="/foto/maskot.webp" className="w-24" />
          <div className="bg-white text-[#3d1c01] text-sm px-3 py-2 rounded-xl shadow-md">
             Halo Sobat Cokro! 🤎
           </div>

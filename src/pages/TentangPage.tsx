@@ -73,7 +73,7 @@ export function TentangPage() {
       {/* 1) HERO ABOUT */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/foto/background (2).jpeg" alt="Bakery Bluder Cokro Madiun, oleh-oleh legendaris khas Madiun sejak 1989" className="w-full h-full object-cover" />
+          <img src="/foto/background (2).webp" alt="Bakery Bluder Cokro Madiun, oleh-oleh legendaris khas Madiun sejak 1989" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-brown via-brand-brown/70 to-brand-brown/40"></div>
         </div>
 
@@ -309,7 +309,7 @@ export function TentangPage() {
               >
                 <div className="w-16 h-16 bg-brand-cream rounded-full flex items-center justify-center border border-brand-gold/30 group-hover:border-brand-red transition-colors overflow-hidden p-2">
                   <img 
-                    src="/foto/logo halal.png" 
+                    src="/foto/logo halal.webp" 
                     alt="Logo Halal Indonesia" 
                     className="w-full h-full object-contain"
                   />
@@ -386,7 +386,7 @@ export function TentangPage() {
               </button>
 
               <img 
-                src="/foto/sertifikat halal.jpeg" 
+                src="/foto/sertifikat halal.webp" 
                 alt="Sertifikat Halal" 
                 className="w-full h-auto object-contain max-h-[80vh]"
               />

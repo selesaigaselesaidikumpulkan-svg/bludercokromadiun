@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        // Menggunakan warna krem gelap dari image_5c433f.png (bg-brand-sand)
+        // Menggunakan warna krem gelap dari image_5c433f.webp (bg-brand-sand)
         // Agar tetap kontras dengan bg beranda yang krem putih
         isScrolled 
           ? 'bg-brand-sand shadow-md py-3' 
@@ -45,7 +45,7 @@ export function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/LOOGO_BLUDER.png" alt="Bluder Cokro Logo" className="h-16 w-auto drop-shadow-md" />
+            <img src="/LOOGO_BLUDER.webp" alt="Bluder Cokro Logo" className="h-16 w-auto drop-shadow-md" />
           </Link>
 
           {/* Desktop Nav */}

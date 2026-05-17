@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom';
 const hampersData = [
   {
     id: 1,
-    image: '/foto/promo-2.jpeg',
+    image: '/foto/promo 2.webp',
     rotate: -6,
     zIndex: 'z-10',
   },
   {
     id: 2,
-    image: '/foto/promo-1.jpeg',
+    image: '/foto/promo 1.webp',
     rotate: 0,
     zIndex: 'z-20',
   },
   {
     id: 3,
-    image: '/foto/promo-3.jpeg',
+    image: '/foto/promo 3.webp',
     rotate: 6,
     zIndex: 'z-10',
   },

@@ -6,7 +6,7 @@ const socials = [
     name: 'Instagram',
     handle: '@bludercokro',
     followers: '150K+',
-    icon: '/foto/Instagram.png',
+    icon: '/foto/Instagram.webp',
     bgColor: 'bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500',
     link: 'https://www.instagram.com/bludercokro/'
   },
@@ -14,7 +14,7 @@ const socials = [
     name: 'TikTok',
     handle: '@bludercokro.official',
     followers: '200K+',
-    icon: '/foto/Tiktok.png',
+    icon: '/foto/Tiktok.webp',
     bgColor: 'bg-black',
     link: 'https://www.tiktok.com/@bludercokro.official'
   },
@@ -22,7 +22,7 @@ const socials = [
     name: 'Facebook',
     handle: '@CokroMadiun',
     followers: '50K+',
-    icon: '/foto/Facebook.png',
+    icon: '/foto/Facebook.webp',
     bgColor: 'bg-blue-600',
     link: 'https://www.facebook.com/CokroMadiun'
   }

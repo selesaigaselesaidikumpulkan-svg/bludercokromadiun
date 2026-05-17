@@ -48,7 +48,7 @@ function HomePage() {
           name="description" 
           content="Rasakan kelembutan Roti Bluder Cokro khas Madiun. Dibuat dengan resep legendaris sejak 1989..." 
         />
-        <meta property="og:image" content="/foto/Bluder cokro.jpeg" />
+        <meta property="og:image" content="/foto/Bluder cokro.webp" />
       </Helmet>
   
       <HeroSection />

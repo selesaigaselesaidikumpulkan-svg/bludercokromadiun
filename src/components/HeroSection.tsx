@@ -71,7 +71,7 @@ export function HeroSection() {
   <div className="absolute inset-0 bg-brand-sand rounded-full transform -rotate-6 scale-105 -z-10"></div>
 
   <img
-    src="/foto/Bluder cokro.jpeg"
+    src="/foto/Bluder cokro.webp"
     alt="Roti Bluder Cokro Madiun - Oleh-oleh khas Madiun dengan koleksi varian rasa original, cokelat, dan keju dengan tekstur serat lembut resep legendaris sejak 1989"
     loading="lazy"
     className="relative z-0 w-full h-auto rounded-3xl object-cover shadow-2xl"
@@ -89,7 +89,7 @@ export function HeroSection() {
   >
     
     <img
-      src="/foto/maskot.png"
+      src="/foto/maskot.webp"
       alt="Blubby, maskot resmi Bluder Cokro Madiun, Karakter kartun ikonik yang merepresentasikan keramahan pelayanan Cokro"
       className="w-20 md:w-24 drop-shadow-lg"
     />

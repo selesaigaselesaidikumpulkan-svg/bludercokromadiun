@@ -4,17 +4,17 @@ import { ShoppingBag, ExternalLink } from 'lucide-react';
 const marketplaces = [{
   name: 'Tokopedia',
   desc: 'Official Store',
-  icon: '/foto/Tokped.png',
+  icon: '/foto/Tokped.webp',
   link: 'https://www.tokopedia.com/bludercokrostore'
 }, {
   name: 'TikTok Shop',
   desc: 'Live & Promo',
-  icon: '/foto/Tiktok-Shop.png',
+  icon: '/foto/Tiktok-Shop.webp',
   link: 'https://www.tiktok.com/@bludercokro.official'
 }, {
   name: 'Shopee',
   desc: 'Mall',
-  icon: '/foto/Shopee.png',
+  icon: '/foto/Shopee.webp',
   link: 'https://shopee.co.id/bludercokro'
 }];
 export function MarketplaceSection() {

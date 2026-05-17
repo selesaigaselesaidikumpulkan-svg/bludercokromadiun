@@ -9,7 +9,7 @@ const PRODUCTS = [
     target: "#standar",
     description:
       "Berbagai varian bluder yang bisa kamu pilih untuk dinikmati sendiri atau bersama keluarga.",
-    image: "/foto/bluder-satuan.png",
+    image: "/foto/bluder-satuan.webp",
     alt: "Berbagai varian Bluder premium khas Madiun",
   },
   {
@@ -18,7 +18,7 @@ const PRODUCTS = [
     target: "#bigsize",
     description:
       "Ukuran lebih besar untuk kepuasan maksimal dan momen spesial.",
-    image: "/foto/bluder-big.png",
+    image: "/foto/bluder-big.webp",
     alt: "Bluder Big Size khas Madiun",
   },
   {
@@ -27,7 +27,7 @@ const PRODUCTS = [
     target: "#pouch",
     description:
       "Kemasan praktis yang mudah dibawa ke mana saja.",
-    image: "/foto/bluder-pouch.png",
+    image: "/foto/bluder-pouch.webp",
     alt: "Bluder Pouch khas Madiun",
   },
 ];

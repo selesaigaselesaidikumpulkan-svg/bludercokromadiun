@@ -17,7 +17,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <img src="/LOOGO_BLUDER.png" alt="Bluder Cokro Logo" className="h-12 w-auto brightness-0 invert" />
+              <img src="/LOOGO_BLUDER.webp" alt="Bluder Cokro Logo" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-brand-sand/80 text-sm leading-relaxed mb-8">
               Oleh-oleh khas Madiun sejak 1989. Menghadirkan kelembutan bluder
