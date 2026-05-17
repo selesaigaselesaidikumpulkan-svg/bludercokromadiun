@@ -80,7 +80,7 @@ export function ProductsSection() {
                   <img
                     src={product.image}
                     alt={product.alt}
-                    loading="lazy"
+
                     decoding="async"
                     width="1200"
                     height="1400"
@@ -153,7 +153,7 @@ export function ProductsSection() {
                 <img
                   src={product.image}
                   alt={product.alt}
-                  loading="lazy"
+
                   decoding="async"
                   width="800"
                   height="1000"
